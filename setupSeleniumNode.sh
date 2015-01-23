@@ -1,4 +1,4 @@
-cd ~
+#!/bin/bash
 wget http://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar
 sudo echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list
 sudo echo "deb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ precise multiverse" >> /etc/apt/sources.list
