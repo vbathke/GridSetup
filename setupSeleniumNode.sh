@@ -9,7 +9,7 @@ sudo sh -c "echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' >> /et
 sudo sh -c "echo 'deb http://packages.linuxmint.com debian import' >> /etc/apt/sources.list"
 sudo apt-get update
 sudo apt-get -y install openjdk-7-jre-headless xvfb xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic firefox dbus-x11
-nohup Xvfb :10 -screen 0 1366x768x24 -ac &
+nohup Xvfb :10 -screen 0 1366x768x24 -ac &> /dev/null &
 export DISPLAY=:10
-nohup java -jar selenium-server-standalone-2.44.0.jar -role node  -hub http://"$1"/grid/register -browser "browserName=firefox,maxInstances=3,platform=ANY,seleniumProtocol=WebDriver" &
+nohup java -jar selenium-server-standalone-2.44.0.jar -role node -hub http://"$1"/grid/register -browser "browserName=firefox,maxInstances=3,platform=ANY,seleniumProtocol=WebDriver" &> /dev/null &
 
