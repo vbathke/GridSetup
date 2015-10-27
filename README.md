@@ -1,11 +1,10 @@
 # testbots
-Configuração do Server e dos Nodes de uma rede de testes para Selenium
+Configuração do Server e dos Nodes de uma rede de testes para Selenium usando Docker
 
 
-###Para configurar o Server em um servidor Linux Ubuntu execute:###
+###Para criar o Server em um servidor Debian Linux e receber mais instruções execute:###
 
-./cloneserver.sh [usuário]@[ip da máquina]
+curl https://raw.githubusercontent.com/vbathke/GridSetup/master/https://raw.githubusercontent.com/vbathke/GridSetup/master/dockerhub.sh | sh
 
-###Para configurar cada Node em um servidor Linux Ubuntu execute:###
 
-./clonenode.sh [usuário]@[ip da máquina] [ip do servidor]:[porta]
+
