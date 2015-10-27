@@ -24,4 +24,4 @@ sudo docker run -d -p 80:4444 --name selenium-hub2 selenium/hub:2.48.2;
 #fi
 
 echo "Command to append node:\n";
-echo "curl https://raw.githubusercontent.com/vbathke/GridSetup/master/https://raw.githubusercontent.com/vbathke/GridSetup/master/dockernode.sh $NODEHOST | sh "
+echo "curl https://raw.githubusercontent.com/vbathke/GridSetup/master/https://raw.githubusercontent.com/vbathke/GridSetup/master/dockernode.sh | sh -s $NODEHOST"
