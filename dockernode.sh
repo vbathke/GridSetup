@@ -34,16 +34,16 @@ sudo docker rm cn5;
         #NODEHOST=`curl http://ipecho.net/plain`
 #fi
 
-if [ $2 != "" ]
-then
-        HUBPORT=$2;
-else
-        HUBPORT="80";
-fi
+#if [ $2 != "" ]
+#then
+#        HUBPORT=$2;
+#else
+#        HUBPORT="80";
+#fi
 
-sudo docker run -d -e HUB_PORT_4444_TCP_ADDR=$1 -e HUB_PORT_4444_TCP_PORT="$HUBPORT" --name cn1 -p 5551:5555 -e REMOTE_HOST="http://$NODEHOST:5551" selenium/node-chrome:2.48.2
-sudo docker run -d -e HUB_PORT_4444_TCP_ADDR=$1 -e HUB_PORT_4444_TCP_PORT="$HUBPORT" --name cn2 -p 5552:5555 -e REMOTE_HOST="http://$NODEHOST:5552" selenium/node-chrome:2.48.2
-sudo docker run -d -e HUB_PORT_4444_TCP_ADDR=$1 -e HUB_PORT_4444_TCP_PORT="$HUBPORT" --name cn3 -p 5553:5555 -e REMOTE_HOST="http://$NODEHOST:5553" selenium/node-chrome:2.48.2
-sudo docker run -d -e HUB_PORT_4444_TCP_ADDR=$1 -e HUB_PORT_4444_TCP_PORT="$HUBPORT" --name cn4 -p 5554:5555 -e REMOTE_HOST="http://$NODEHOST:5554" selenium/node-chrome:2.48.2
-sudo docker run -d -e HUB_PORT_4444_TCP_ADDR=$1 -e HUB_PORT_4444_TCP_PORT="$HUBPORT" --name cn5 -p 5555:5555 -e REMOTE_HOST="http://$NODEHOST:5555" selenium/node-chrome:2.48.2
+sudo docker run -d -e HUB_PORT_4444_TCP_ADDR=$1 -e HUB_PORT_4444_TCP_PORT="80" --name cn1 -p 5551:5555 -e REMOTE_HOST="http://$NODEHOST:5551" selenium/node-chrome:2.48.2
+sudo docker run -d -e HUB_PORT_4444_TCP_ADDR=$1 -e HUB_PORT_4444_TCP_PORT="80" --name cn2 -p 5552:5555 -e REMOTE_HOST="http://$NODEHOST:5552" selenium/node-chrome:2.48.2
+sudo docker run -d -e HUB_PORT_4444_TCP_ADDR=$1 -e HUB_PORT_4444_TCP_PORT="80" --name cn3 -p 5553:5555 -e REMOTE_HOST="http://$NODEHOST:5553" selenium/node-chrome:2.48.2
+sudo docker run -d -e HUB_PORT_4444_TCP_ADDR=$1 -e HUB_PORT_4444_TCP_PORT="80" --name cn4 -p 5554:5555 -e REMOTE_HOST="http://$NODEHOST:5554" selenium/node-chrome:2.48.2
+sudo docker run -d -e HUB_PORT_4444_TCP_ADDR=$1 -e HUB_PORT_4444_TCP_PORT="80" --name cn5 -p 5555:5555 -e REMOTE_HOST="http://$NODEHOST:5555" selenium/node-chrome:2.48.2
 
