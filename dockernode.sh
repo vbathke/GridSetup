@@ -9,6 +9,7 @@ sudo sh -c "echo 'deb http://apt.dockerproject.org/repo debian-stretch main' >> 
 
 sudo apt-get update;
 sudo apt-cache policy docker-engine;
+sudo apt-get upgrade;
 sudo wget http://launchpadlibrarian.net/173841617/init-system-helpers_1.18_all.deb;
 sudo dpkg -i init-system-helpers_1.18_all.deb;
 sudo apt-get --force-yes -y install docker-engine;
