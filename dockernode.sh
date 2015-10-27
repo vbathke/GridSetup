@@ -27,12 +27,12 @@ sudo docker rm cn3;
 sudo docker rm cn4;
 sudo docker rm cn5;
 
-if [ $3 != "extern" ]
-then
+#if [ $3 != "extern" ]
+#then
         NODEHOST=`ifconfig eth0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`;
-else
-        NODEHOST=`curl http://ipecho.net/plain`
-fi
+#else
+        #NODEHOST=`curl http://ipecho.net/plain`
+#fi
 
 if [ $2 != "" ]
 then
