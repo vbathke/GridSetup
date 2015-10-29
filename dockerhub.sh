@@ -12,6 +12,8 @@ sudo apt-cache policy docker-engine;
 sudo wget http://launchpadlibrarian.net/173841617/init-system-helpers_1.18_all.deb;
 sudo dpkg -i init-system-helpers_1.18_all.deb;
 sudo apt-get --force-yes -y install docker-engine;
+sudo curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose;
+sudo chmod +x /usr/local/bin/docker-compose;
 sudo service docker start;
 sudo docker run -d -p 80:4444 --name selenium-hub2 selenium/hub:2.48.2;
 
